@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abbas Tati's Portfolio - Contact Me</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins", sans-serif;
+      }
+      body {
+        background-color: rgb(0, 0, 45);
+        color: white;
+      }
+      nav {
+        position: fixed;
+        top: 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 75px;
+        background-color: rgb(12, 12, 66);
+        z-index: 1000;
+        width: 100%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      }
+      nav ul {
+        display: flex;
+        justify-content: center;
+      }
+      nav ul li {
+        list-style: none;
+        margin: 0 23px;
+      }
+      nav ul li a {
+        text-decoration: none;
+        color: white;
+      }
+      nav ul li a:hover {
+        color: purple;
+        font-size: 1.02rem;
+      }
+      .active {
+        color: purple;
+        font-size: 1.02rem;
+        font-weight: bold;
+      }
+      .left {
+        font-size: 1.6rem;
+        margin-left: 5%;
+      }
+      .contactSection {
+        margin-top: 10%;
+        margin-left: 5%;
+        margin-right: 5%;
+      }
+      h1 {
+        text-align: center;
+        /* color: purple; */
+        margin-bottom: 2rem;
+      }
+      .contactForm {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .contactForm input,
+      .contactForm textarea {
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        font-size: 1rem;
+        background-color: rgb(12, 12, 66);
+        color: white;
+      }
+      .contactForm input:focus,
+      .contactForm textarea:focus {
+        outline: none;
+        border: 2px solid purple;
+      }
+      .contactForm button {
+        background-color: #6cd1f5;
+        color: white;
+        font-size: 1rem;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        border: none;
+      }
+      .contactForm button:hover {
+        background-color: #44c5f4;
+      }
+      .contactOptions {
+        text-align: center;
+        margin-top: 3rem;
+      }
+      .contactOptions p {
+        margin: 1rem 0;
+      }
+      .contactOptions a {
+        text-decoration: none;
+        color: white;
+        background-color: purple;
+        padding: 10px 20px;
+        border-radius: 5px;
+        margin: 5px;
+        font-size: 1rem;
+      }
+      .contactOptions a:hover {
+        background-color: #6cd1f5;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="left">Welcome to My Portfolio <img src="asset/clipboard-with-pen.png" alt="" width="5%" style="margin-bottom: -1.2%;"></div>
+        <div class="right">
+          <ul>
+            <li><a href="/" id="homeLink">Home</a></li>
+            <li><a href="/about.html" id="aboutLink">About</a></li>
+            <li><a href="/services.html" id="servicesLink">Services</a></li>
+            <li><a href="/projects.html" id="projectsLink">Projects</a></li>
+            <li><a href="/contact.html" id="contactLink">Contact Me</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="contactSection">
+        <h1>Contact Me</h1>
+        <form class="contactForm" action="#" method="POST">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
+      <section class="contactOptions">
+        <h2>Other Ways to Contact Me</h2>
+        <p>Feel free to reach out to me through any of the following platforms:</p>
+        <a href="mailto:abbas.tati@example.com">Email</a>
+        <a href="https://www.linkedin.com/in/abbas-tati/">LinkedIn</a>
+        <a href="https://www.instagram.com/abbas______27/">Instagram</a>
+        <a href="https://wa.me/xxxxxxxxxx">WhatsApp</a> <!-- Replace xxxxxxxxxx with your WhatsApp number -->
+        <a href="tel:+1234567890">Call Me</a> <!-- Replace with your phone number -->
+      </section>
+      <hr style="margin-bottom: 2%; border-color: purple; width: 80%; margin-left: 10%; height: 3px; background-color: purple; border-radius: 3px; margin-top:4%;">
+    </main>
+    <script>
+      // Get current page's name
+      const currentPage = window.location.pathname.split('/').pop();
+
+      // Remove "active" class from all links
+      const navLinks = document.querySelectorAll('nav ul li a');
+      navLinks.forEach(link => link.classList.remove('active'));
+
+      // Add "active" class to the current page's link
+      if (currentPage === 'about.html') {
+        document.getElementById('aboutLink').classList.add('active');
+      } else if (currentPage === 'services.html') {
+        document.getElementById('servicesLink').classList.add('active');
+      } else if (currentPage === 'projects.html') {
+        document.getElementById('projectsLink').classList.add('active');
+      } else if (currentPage === 'contact.html') {
+        document.getElementById('contactLink').classList.add('active');
+      } else {
+        document.getElementById('homeLink').classList.add('active');
+      }
+    </script>
+  </body>
+</html>

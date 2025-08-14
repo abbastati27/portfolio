@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Section</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins", sans-serif;
+      }
+      body {
+        background-color: rgb(0, 0, 45);
+        color: white;
+      }
+      nav {
+        position: fixed;
+        top: 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 75px;
+        background-color: rgb(12, 12, 66);
+        z-index: 1000;
+        width: 100%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      }
+      nav ul {
+        display: flex;
+        justify-content: center;
+      }
+      nav ul li {
+        list-style: none;
+        margin: 0 23px;
+      }
+      nav ul li a {
+        text-decoration: none;
+        color: white;
+      }
+      nav ul li a:hover {
+        color: purple;
+        font-size: 1.02rem;
+      }
+      .active {
+        color: purple;
+        font-size: 1.02rem;
+        font-weight: bold;
+      }
+      .left {
+        font-size: 1.6rem;
+        margin-left: 5%;
+      }
+      
+      /* Common styles for each uniquely named section */
+      .aboutMeSection,
+      .journeySection,
+      .whatIDoSection,
+      .getToKnowMeSection {
+        padding: 50px 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      /* Heading styles for all sections */
+      .aboutMeSection h2,
+      .journeySection h2,
+      .whatIDoSection h2,
+      .getToKnowMeSection h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #4b0082;
+      }
+      .aboutMeSection {
+        margin-top: 4%;
+      }
+      .aboutContent {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 50px 0;
+        flex-wrap: wrap;
+        font-size: x-large;
+        gap: 17%;
+      }
+      .aboutContent div {
+        width: 45%;
+        min-width: 300px;
+      }
+      .whatIDoContent{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 50px 0;
+        flex-wrap: wrap;
+        font-size: 1.3rem;
+        /* gap: 17%; */
+      }
+      .whatIDoContent div{
+        width: 45%;
+        min-width: 300px;
+      }
+      .aboutContent img {
+        width: 95%;
+        height: 95%;
+        border-radius: 10px;
+      }
+      .timeline {
+        border-left: 3px solid #4b0082;
+        padding-left: 20px;
+        font-size: 1.3rem;
+      }
+      .timeline h4 {
+        color: #4b0082;
+        margin: 10px 0;
+      }
+      .skillsList,
+      .projectsList {
+        list-style: none;
+        padding: 0;
+      }
+      .skillsList li,
+      .projectsList li {
+        margin: 5px 0;
+      }
+      .funFacts {
+        text-align: center;
+        font-size: 1.3rem;
+      }
+      .funFacts ul {
+        list-style: none;
+        padding: 0;
+      }
+      .funFacts li {
+        margin: 10px 0;
+      }
+      
+      /* New styling to match index.html's rightSection image coordinates and size */
+      .aboutContent .rightSection {
+        width: 38% !important;
+      }
+      .aboutContent .rightSection img {
+        width: 110% !important;
+        height: 110% !important;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="left">
+          Welcome to My Portfolio 
+          <img src="asset/clipboard-with-pen.png" alt="" width="5%" style="margin-bottom: -1.2%;">
+        </div>
+        <div class="right">
+          <ul>
+            <li><a href="/" id="homeLink">Home</a></li>
+            <li><a href="/about.html" id="aboutLink">About</a></li>
+            <li><a href="/services.html" id="servicesLink">Services</a></li>
+            <li><a href="/projects.html" id="projectsLink">Projects</a></li>
+            <li><a href="/contact.html" id="contactLink">Contact Me</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <section class="aboutMeSection">
+      <h2>About Me</h2>
+      <div class="aboutContent">
+        <div>
+          <p>
+            Hi! I'm <strong>Abbas Tati</strong>, a dedicated
+            <strong>web developer</strong> and <strong>AI enthusiast</strong>.
+            My passion lies in creating efficient, scalable, and visually
+            appealing digital solutions.
+          </p>
+          <p>
+            I have a strong foundation in <strong>Python</strong>,
+            <strong>SQL</strong>, and frameworks like
+            <strong>TensorFlow</strong>. As a <strong>data scientist</strong>, I
+            thrive on solving real-world problems using machine learning and AI.
+          </p>
+          <p>
+            When I'm not coding, I enjoy <strong>sports</strong> like football
+            and volleyball, or exploring new tech trends.
+          </p>
+        </div>
+        <div class="rightSection">
+          <img src="asset/Blue Modern Tech Futuristic Woman Youtube Profile Picture_2.png" alt="About Me Image" />
+        </div>
+      </div>
+    </section>
+    <section class="journeySection">
+      <h2>My Journey</h2>
+      <div class="timeline">
+        <h4>2023 - Present</h4>
+        <p>Pursuing a career in software development and data science.</p>
+        <h4>2022</h4>
+        <p>
+          Built full-stack websites and explored advanced topics in AI and
+          machine learning.
+        </p>
+        <h4>2021</h4>
+        <p>
+          Started working on projects in TensorFlow, Keras, and deep learning,
+          including classification models.
+        </p>
+        <h4>2020</h4>
+        <p>
+          Began my journey as a developer by learning Python, SQL, and web
+          development basics.
+        </p>
+      </div>
+    </section>
+    <section class="whatIDoSection">
+      <h2>What I Do</h2>
+      <div class="whatIDoContent">
+        <div>
+          <h4 style="color: #4b0082;">Technical Skills</h4>
+          <ul class="skillsList">
+            <li>Web Development: HTML, CSS, JS, AngularJS</li>
+            <li>Data Science: Python, SQL, TensorFlow</li>
+            <li>AI & ML: Neural Networks, Deep Learning</li>
+            <li>Database Management: MySQL</li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="color: #4b0082;">Projects</h4>
+          <ul class="projectsList">
+            <li>Celebrity Classifier using Deep Learning</li>
+            <li>Plant Disease Classification using the PlantVillage Dataset</li>
+            <li>Sports Firm Website</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="getToKnowMeSection">
+      <h2>Get to Know Me</h2>
+      <div class="funFacts">
+        <p><strong>Fun Facts:</strong></p>
+        <ul>
+          <li>⚽ I'm a huge sports fan and love playing football!</li>
+          <li>💻 I’ve built multiple full-stack web applications.</li>
+          <li>🧠 My favorite AI topic is neural networks.</li>
+          <li>
+            🌍 I’m always exploring new tech trends and open-source
+            contributions.
+          </li>
+        </ul>
+      </div>
+    </section>
+    <hr style="margin-bottom: 2%; border-color: purple; width: 80%; margin-left: 10%; height: 3px; background-color: purple; border-radius: 3px;">
+    <script>
+      // Get current page's name
+      const currentPage = window.location.pathname.split('/').pop();
+      // Remove "active" class from all links
+      const navLinks = document.querySelectorAll('nav ul li a');
+      navLinks.forEach(link => link.classList.remove('active'));
+      // Add "active" class to the current page's link
+      if (currentPage === 'about.html') {
+        document.getElementById('aboutLink').classList.add('active');
+      } else if (currentPage === 'services.html') {
+        document.getElementById('servicesLink').classList.add('active');
+      } else if (currentPage === 'projects.html') {
+        document.getElementById('projectsLink').classList.add('active');
+      } else if (currentPage === 'contact.html') {
+        document.getElementById('contactLink').classList.add('active');
+      } else {
+        document.getElementById('homeLink').classList.add('active');
+      }
+    </script>
+  </body>
+</html>

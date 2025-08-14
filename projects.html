@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abbas Tati's Portfolio - Projects</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* General Styles */
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins", sans-serif;
+      }
+      body {
+        background-color: rgb(0, 0, 45);
+        color: white;
+      }
+      nav {
+        position: fixed;
+        top: 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 75px;
+        background-color: rgb(12, 12, 66);
+        z-index: 1000;
+        width: 100%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+      }
+      nav ul {
+        display: flex;
+        justify-content: center;
+      }
+      nav ul li {
+        list-style: none;
+        margin: 0 23px;
+      }
+      nav ul li a {
+        text-decoration: none;
+        color: white;
+      }
+      nav ul li a:hover {
+        color: purple;
+        font-size: 1.02rem;
+      }
+      .active {
+        color: purple;
+        font-size: 1.02rem;
+        font-weight: bold;
+      }
+      .left {
+        font-size: 1.6rem;
+        margin-left: 5%;
+      }
+      .projectSection {
+        margin-top: 10%;
+        margin-left: 5%;
+      }
+      .project {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 3rem;
+        background-color: rgb(12, 12, 66);
+        padding: 20px;
+        border-radius: 10px;
+      }
+      .project img {
+        width: 30%;
+        border-radius: 10px;
+      }
+      .projectContent {
+        width: 60%;
+      }
+      .projectContent h2 {
+        color: purple;
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+      }
+      .projectContent p {
+        margin-bottom: 10px;
+        font-size: 1rem;
+      }
+      .projectContent a {
+        text-decoration: none;
+        background-color: #6cd1f5;
+        padding: 10px;
+        color: purple;
+        border-radius: 5px;
+        font-size: 1rem;
+        cursor: pointer;
+      }
+      .projectContent a:hover {
+        background-color: #44c5f4;
+      }
+
+      /* Modal Styles */
+      .modal {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        max-width: 700px;
+        background-color: white;
+        color: black;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        z-index: 1001;
+      }
+      .modal-header {
+        padding: 10px;
+        background-color: purple;
+        color: white;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        font-size: 1.2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .modal-header .close {
+        cursor: pointer;
+        font-size: 1.5rem;
+      }
+      .modal-body {
+        padding: 20px;
+      }
+      .modal-body video {
+        width: 100%;
+        border-radius: 10px;
+      }
+      .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 1000;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+        <nav>
+            <div class="left">Welcome to My Portfolio <img src="asset/clipboard-with-pen.png" alt="" width="5%" style="margin-bottom: -1.2%;"></div>
+            <div class="right">
+              <ul>
+                <li><a href="/" id="homeLink">Home</a></li>
+                <li><a href="/about.html" id="aboutLink">About</a></li>
+                <li><a href="/services.html" id="servicesLink">Services</a></li>
+                <li><a href="/projects.html" id="projectsLink">Projects</a></li>
+                <li><a href="/contact.html" id="contactLink">Contact Me</a></li>
+              </ul>
+            </div>
+          </nav>
+    </header>
+    <main>
+      <section class="projectSection">
+        <h1>My Projects</h1>
+        <div class="project">
+          <div class="projectContent">
+            <h2>Plant Disease Classification</h2>
+            <p>
+              This project uses deep learning techniques with TensorFlow and
+              Keras to classify plant diseases based on images. It is trained on
+              the PlantVillage dataset.
+            </p>
+            <a href="#" class="watch-demo" data-video="PDP.mp4">Watch Demo</a>
+            <a
+              href="https://github.com/abbastati27/ngo-information-platform"
+              target="_blank"
+              >View on GitHub</a
+            >
+          </div>
+          <img src="PDP.png" alt="Plant Disease Classification" />
+        </div>
+        <div class="project">
+          <div class="projectContent">
+            <h2>Celebrity Classifier</h2>
+            <p>
+              A machine learning model that classifies celebrities based on
+              their images. This project demonstrates image classification using
+              CNNs.
+            </p>
+            <a href="#" class="watch-demo" data-video="PDP.mp4">Watch Demo</a>
+            <a
+              href="https://github.com/abbastati27/ngo-information-platform"
+              target="_blank"
+              >View on GitHub</a
+            >
+          </div>
+          <img src="celebrity-classifier.jpg" alt="Celebrity Classifier" />
+        </div>
+        <div class="project">
+          <div class="projectContent">
+            <h2>NGO Information Platform</h2>
+            <p>
+              A web application built using PHP and MySQL that connects people
+              with NGOs. Users can donate and follow NGOs.
+            </p>
+            <a href="#" class="watch-demo" data-video="PDP.mp4">Watch Demo</a>
+
+            <a
+              href="https://github.com/abbastati27/ngo-information-platform"
+              target="_blank"
+              >View on GitHub</a
+            >
+          </div>
+          <img src="ngo-platform.jpg" alt="NGO Information Platform" />
+        </div>
+      </section>
+      <hr style="margin-bottom: 2%; border-color: purple; width: 80%; margin-left: 10%; height: 3px; background-color: purple; border-radius: 3px;">
+    </main>
+
+    <!-- Modal -->
+    <div class="overlay"></div>
+    <div class="modal">
+      <div class="modal-header">
+        Demo Video
+        <span class="close">&times;</span>
+      </div>
+      <div class="modal-body">
+        <video controls></video>
+      </div>
+    </div>
+
+    <script>
+      const modal = document.querySelector(".modal");
+      const overlay = document.querySelector(".overlay");
+      const videoElement = modal.querySelector("video");
+      const closeModal = document.querySelector(".modal .close");
+      const demoButtons = document.querySelectorAll(".watch-demo");
+
+      demoButtons.forEach((button) => {
+        button.addEventListener("click", (e) => {
+          e.preventDefault();
+          const videoSrc = button.getAttribute("data-video");
+          videoElement.src = videoSrc;
+          modal.style.display = "block";
+          overlay.style.display = "block";
+        });
+      });
+
+      closeModal.addEventListener("click", () => {
+        modal.style.display = "none";
+        overlay.style.display = "none";
+        videoElement.pause();
+        videoElement.src = "";
+      });
+
+      overlay.addEventListener("click", () => {
+        modal.style.display = "none";
+        overlay.style.display = "none";
+        videoElement.pause();
+        videoElement.src = "";
+      });
+    </script>
+    <script>
+        // Get current page's name
+        const currentPage = window.location.pathname.split('/').pop();
+  
+        // Remove "active" class from all links
+        const navLinks = document.querySelectorAll('nav ul li a');
+        navLinks.forEach(link => link.classList.remove('active'));
+  
+        // Add "active" class to the current page's link
+        if (currentPage === 'about.html') {
+          document.getElementById('aboutLink').classList.add('active');
+        } else if (currentPage === 'services.html') {
+          document.getElementById('servicesLink').classList.add('active');
+        } else if (currentPage === 'projects.html') {
+          document.getElementById('projectsLink').classList.add('active');
+        } else if (currentPage === 'contact.html') {
+          document.getElementById('contactLink').classList.add('active');
+        } else {
+          document.getElementById('homeLink').classList.add('active');
+        }
+      </script>
+  </body>
+</html>
