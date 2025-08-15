@@ -183,19 +183,17 @@
               A career recommendation system using AI to suggest personalized
               career paths based on skills, interests, and job market data.
             </p>
-            <a
-              href="#"
-              class="watch-demo"
-              data-video="https://drive.gowefwefwefogle.com/file/d/1BThxpalmWFfYB0iFUvBDlPejZ4I_tK_B/preview"
-              >Watch Demo</a
+            <a href="#" class="view-details" data-details="Details/CPAI.html"
+              >View Details</a
             >
+
             <a
               href="https://github.com/abbastati27/careerpath-ai"
               target="_blank"
               >View on GitHub</a
             >
           </div>
-          <img src="careerpath-ai.jpg" alt="CareerPath AI" />
+          <img src="asset/CPAI.png" alt="CareerPath AI" />
         </div>
 
         <div class="project">
@@ -205,17 +203,14 @@
               A machine learning model predicting IPL cricket match outcomes
               using historical data, player performance, and team stats.
             </p>
-            <a
-              href="#"
-              class="watch-demo"
-              data-video="https://drive.gowefwefwefogle.com/file/d/1BThxpalmWFfYB0iFUvBDlPejZ4I_tK_B/preview"
-              >Watch Demo</a
+            <a href="#" class="view-details" data-details="Details/CV.html"
+              >View Details</a
             >
             <a href="https://github.com/abbastati27/cricvision" target="_blank"
               >View on GitHub</a
             >
           </div>
-          <img src="cricvision.jpg" alt="CricVision - IPL Match Predictor" />
+          <img src="asset/cv.png" alt="CricVision - IPL Match Predictor" />
         </div>
 
         <div class="project">
@@ -226,11 +221,8 @@
               learning model. Capable of engaging in natural language
               conversations.
             </p>
-            <a
-              href="#"
-              class="watch-demo"
-              data-video="https://drive.google.com/file/d/1VDllWIS2YasP1qDki-4E3gWSi2R00mwi/preview"
-              >Watch Demo</a
+            <a href="#" class="view-details" data-details="Details/S2S.html"
+              >View Details</a
             >
             <a
               href="https://github.com/abbastati27/Seq2Seq-chatbot.git"
@@ -249,11 +241,8 @@
               celebrities. Demonstrates deep learning-based image
               classification.
             </p>
-            <a
-              href="#"
-              class="watch-demo"
-              data-video="https://drive.google.com/file/d/1Rg39_HcsFykvaDm1T9Szk23hdU_OaQww/preview"
-              >Watch Demo</a
+            <a href="#" class="view-details" data-details="Details/CIC.html"
+              >View Details</a
             >
             <a
               href="https://github.com/abbastati27/Celebrity-Classifier.git"
@@ -261,10 +250,7 @@
               >View on GitHub</a
             >
           </div>
-          <img
-            src="asset/cic.png"
-            alt="Celebrity Image Classifier"
-          />
+          <img src="asset/cic.png" alt="Celebrity Image Classifier" />
         </div>
 
         <div class="project">
@@ -275,11 +261,8 @@
               classify plant diseases from leaf images. Trained on the
               PlantVillage dataset.
             </p>
-            <a
-              href="#"
-              class="watch-demo"
-              data-video="https://drive.google.com/file/d/1dc6NdvkV7PmJZuNpqj368524djvD6XXj/preview"
-              >Watch Demo</a
+            <a href="#" class="view-details" data-details="Details/PDC.html"
+              >View Details</a
             >
             <a
               href="https://github.com/abbastati27/Plant-Disease-Classifier.git"
@@ -298,11 +281,8 @@
               using regression techniques and real estate datasets. Implemented
               with Python and Scikit-learn.
             </p>
-            <a
-              href="#"
-              class="watch-demo"
-              data-video="https://drive.google.com/file/d/13lZVTgaHMgGvcszapEU10RssGS6N3atO/preview"
-              >Watch Demo</a
+            <a href="#" class="view-details" data-details="Details/BHP.html"
+              >View Details</a
             >
             <a
               href="https://github.com/abbastati27/Bangluru-Price-Prediction.git"
@@ -321,14 +301,13 @@
               NGOs. Users can contribute financially or in-kind and track the
               impact of their donations.
             </p>
-             <a
-              href="#"
-              class="watch-demo"
-              data-video="https://drive.google.com/file/d/1BThxpalmWFfYB0iFUvBDlPejZ4I_tK_B/preview"
-              >Watch Demo</a
+            <a href="#" class="view-details" data-details="Details/BA.html"
+              >View Details</a
             >
 
-            <a href="https://github.com/haiderdawasaz/BlessedAid.git" target="_blank"
+            <a
+              href="https://github.com/haiderdawasaz/BlessedAid.git"
+              target="_blank"
               >View on GitHub</a
             >
           </div>
@@ -343,11 +322,8 @@
               compare, and book tickets for events, movies, and travel. Built
               with a responsive UI and secure payment integration.
             </p>
-            <a
-              href="#"
-              class="watch-demo"
-              data-video="https://drive.google.com/file/d/1DEmui7-ve5tNuQv7Skkd3y5oDmQQ-hEp/preview"
-              >Watch Demo</a
+            <a href="#" class="view-details" data-details="Details/TBK.html"
+              >View Details</a
             >
             <a
               href="https://github.com/abbastati27/ticketbookkaro"
@@ -371,54 +347,15 @@
         "
       />
     </main>
-
-    <!-- Modal -->
-    <div class="overlay"></div>
-    <div class="modal">
+    <div class="overlay" id="overlay"></div>
+    <div class="modal" id="projectModal">
       <div class="modal-header">
-        Demo Video
-        <span class="close">&times;</span>
+        <span id="modalTitle">Project Details</span>
+        <span class="close" id="closeModal">&times;</span>
       </div>
-      <div class="modal-body">
-        <iframe
-          src=""
-          width="100%"
-          height="400px"
-          allow="autoplay"
-          frameborder="0"
-        ></iframe>
-      </div>
+      <div class="modal-body" id="modalBody">Loading...</div>
     </div>
 
-    <script>
-      const modal = document.querySelector(".modal");
-      const overlay = document.querySelector(".overlay");
-      const iframeElement = modal.querySelector("iframe");
-      const closeModal = document.querySelector(".modal .close");
-      const demoButtons = document.querySelectorAll(".watch-demo");
-
-      demoButtons.forEach((button) => {
-        button.addEventListener("click", (e) => {
-          e.preventDefault();
-          const videoSrc = button.getAttribute("data-video");
-          iframeElement.src = videoSrc;
-          modal.style.display = "block";
-          overlay.style.display = "block";
-        });
-      });
-
-      closeModal.addEventListener("click", () => {
-        modal.style.display = "none";
-        overlay.style.display = "none";
-        iframeElement.src = "";
-      });
-
-      overlay.addEventListener("click", () => {
-        modal.style.display = "none";
-        overlay.style.display = "none";
-        iframeElement.src = "";
-      });
-    </script>
     <script>
       // Get current page's name
       const currentPage = window.location.pathname.split("/").pop();
@@ -439,6 +376,46 @@
       } else {
         document.getElementById("homeLink").classList.add("active");
       }
+
+      // Modal handling
+      const modal = document.getElementById("projectModal");
+      const overlay = document.getElementById("overlay");
+      const modalBody = document.getElementById("modalBody");
+      const modalTitle = document.getElementById("modalTitle");
+      const closeModal = document.getElementById("closeModal");
+
+      document.querySelectorAll(".view-details").forEach((button) => {
+        button.addEventListener("click", function (e) {
+          e.preventDefault();
+          const detailsUrl = this.getAttribute("data-details");
+          modalBody.innerHTML = "Loading...";
+          modalTitle.innerText =
+            this.parentElement.querySelector("h2").innerText;
+
+          // Fetch the HTML file and load into modal
+          fetch(detailsUrl)
+            .then((response) => response.text())
+            .then((data) => {
+              modalBody.innerHTML = data;
+            })
+            .catch(() => {
+              modalBody.innerHTML = "<p>Error loading details.</p>";
+            });
+
+          overlay.style.display = "block";
+          modal.style.display = "block";
+        });
+      });
+
+      // Close modal
+      document.getElementById("closeModal").addEventListener("click", () => {
+        modal.style.display = "none";
+        overlay.style.display = "none";
+      });
+      overlay.addEventListener("click", () => {
+        modal.style.display = "none";
+        overlay.style.display = "none";
+      });
     </script>
   </body>
 </html>
