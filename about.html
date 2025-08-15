@@ -57,7 +57,7 @@
         font-size: 1.6rem;
         margin-left: 5%;
       }
-      
+
       /* Common styles for each uniquely named section */
       .aboutMeSection,
       .journeySection,
@@ -86,13 +86,16 @@
         margin: 50px 0;
         flex-wrap: wrap;
         font-size: x-large;
-        gap: 17%;
+        gap: 8%;
+      }
+      .aboutContent div:first-child {
+        width: 54%;
       }
       .aboutContent div {
         width: 45%;
         min-width: 300px;
       }
-      .whatIDoContent{
+      .whatIDoContent {
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -101,7 +104,7 @@
         font-size: 1.3rem;
         /* gap: 17%; */
       }
-      .whatIDoContent div{
+      .whatIDoContent div {
         width: 45%;
         min-width: 300px;
       }
@@ -110,6 +113,7 @@
         height: 95%;
         border-radius: 10px;
       }
+
       .timeline {
         border-left: 3px solid #4b0082;
         padding-left: 20px;
@@ -139,7 +143,7 @@
       .funFacts li {
         margin: 10px 0;
       }
-      
+
       /* New styling to match index.html's rightSection image coordinates and size */
       .aboutContent .rightSection {
         width: 38% !important;
@@ -154,8 +158,13 @@
     <header>
       <nav>
         <div class="left">
-          Welcome to My Portfolio 
-          <img src="asset/clipboard-with-pen.png" alt="" width="5%" style="margin-bottom: -1.2%;">
+          Welcome to My Portfolio
+          <img
+            src="asset/clipboard-with-pen.png"
+            alt=""
+            width="5%"
+            style="margin-bottom: -1.2%"
+          />
         </div>
         <div class="right">
           <ul>
@@ -173,46 +182,66 @@
       <div class="aboutContent">
         <div>
           <p>
-            Hi! I'm <strong>Abbas Tati</strong>, a dedicated
-            <strong>web developer</strong> and <strong>AI enthusiast</strong>.
-            My passion lies in creating efficient, scalable, and visually
-            appealing digital solutions.
+            Hi! I'm <strong>Abbas Tati</strong>, a passionate
+            <strong>AI Engineer</strong> and
+            <strong>Full-Stack Developer</strong> dedicated to building
+            intelligent, scalable, and impactful digital solutions. My expertise
+            bridges modern web development with cutting-edge artificial
+            intelligence.
           </p>
+          <br />
           <p>
-            I have a strong foundation in <strong>Python</strong>,
-            <strong>SQL</strong>, and frameworks like
-            <strong>TensorFlow</strong>. As a <strong>data scientist</strong>, I
-            thrive on solving real-world problems using machine learning and AI.
+            I specialize in <strong>Machine Learning</strong>,
+            <strong>Deep Learning</strong>,
+            <strong>Natural Language Processing</strong>, and
+            <strong>Large Language Models (LLMs)</strong>. I love transforming
+            data into insights, and ideas into fully functional applications.
           </p>
+          <br />
           <p>
-            When I'm not coding, I enjoy <strong>sports</strong> like football
-            and volleyball, or exploring new tech trends.
+            Outside of tech, I'm an avid <strong>sports person</strong> —
+            football, volleyball, and cricket are my go-to activities. I believe
+            teamwork on the field is just as important as collaboration in code.
           </p>
         </div>
         <div class="rightSection">
-          <img src="asset/Blue Modern Tech Futuristic Woman Youtube Profile Picture_2.png" alt="About Me Image" />
+          <img
+            src="asset/Blue Modern Tech Futuristic Woman Youtube Profile Picture_2.png"
+            alt="About Me Image"
+          />
         </div>
       </div>
     </section>
     <section class="journeySection">
       <h2>My Journey</h2>
       <div class="timeline">
-        <h4>2023 - Present</h4>
-        <p>Pursuing a career in software development and data science.</p>
+        <h4>2024 - Present</h4>
+        <p>
+          Focusing on AI-powered applications, integrating LLMs into real-world
+          products, and refining full-stack skills.
+        </p>
+
+        <h4>2023</h4>
+        <p>
+          Worked on advanced AI projects including NLP chatbots, computer vision
+          solutions, and deep learning models.
+        </p>
+
         <h4>2022</h4>
         <p>
-          Built full-stack websites and explored advanced topics in AI and
-          machine learning.
+          Developed multiple web applications using modern frameworks and
+          explored large-scale machine learning systems.
         </p>
+
         <h4>2021</h4>
         <p>
-          Started working on projects in TensorFlow, Keras, and deep learning,
-          including classification models.
+          Dived deeper into AI fundamentals — Neural Networks, CNNs, RNNs, and
+          hands-on deep learning using TensorFlow & PyTorch.
         </p>
+
         <h4>2020</h4>
         <p>
-          Began my journey as a developer by learning Python, SQL, and web
-          development basics.
+          Started my coding journey with Python, SQL, HTML, CSS, and JavaScript.
         </p>
       </div>
     </section>
@@ -220,20 +249,21 @@
       <h2>What I Do</h2>
       <div class="whatIDoContent">
         <div>
-          <h4 style="color: #4b0082;">Technical Skills</h4>
+          <h4 style="color: #4b0082">Technical Skills</h4>
           <ul class="skillsList">
-            <li>Web Development: HTML, CSS, JS, AngularJS</li>
-            <li>Data Science: Python, SQL, TensorFlow</li>
-            <li>AI & ML: Neural Networks, Deep Learning</li>
-            <li>Database Management: MySQL</li>
+            <li>Web Development: HTML, CSS, JavaScript, AngularJS</li>
+            <li>Backend & Databases: Python, Flask, MySQL, SQL</li>
+            <li>AI & ML: TensorFlow, PyTorch, Neural Networks, LLMs</li>
+            <li>Specializations: NLP, Computer Vision, Deep Learning</li>
           </ul>
         </div>
         <div>
-          <h4 style="color: #4b0082;">Projects</h4>
+          <h4 style="color: #4b0082">Projects</h4>
           <ul class="projectsList">
-            <li>Celebrity Classifier using Deep Learning</li>
-            <li>Plant Disease Classification using the PlantVillage Dataset</li>
-            <li>Sports Firm Website</li>
+            <li>Celebrity Image Classifier using CNNs</li>
+            <li>Plant Disease Detection using Deep Learning</li>
+            <li>LLM-powered Chatbot for Customer Support</li>
+            <li>Sports Firm Website (Full-Stack)</li>
           </ul>
         </div>
       </div>
@@ -243,34 +273,43 @@
       <div class="funFacts">
         <p><strong>Fun Facts:</strong></p>
         <ul>
-          <li>⚽ I'm a huge sports fan and love playing football!</li>
-          <li>💻 I’ve built multiple full-stack web applications.</li>
-          <li>🧠 My favorite AI topic is neural networks.</li>
+          <li>⚽ I'm a competitive football player and sports enthusiast.</li>
           <li>
-            🌍 I’m always exploring new tech trends and open-source
-            contributions.
+            💻 I've developed AI and full-stack applications from scratch.
           </li>
+          <li>🧠 I'm fascinated by Large Language Models and AI ethics.</li>
+          <li>🌍 I'm a lifelong learner, exploring new tech every day.</li>
         </ul>
       </div>
     </section>
-    <hr style="margin-bottom: 2%; border-color: purple; width: 80%; margin-left: 10%; height: 3px; background-color: purple; border-radius: 3px;">
+    <hr
+      style="
+        margin-bottom: 2%;
+        border-color: purple;
+        width: 80%;
+        margin-left: 10%;
+        height: 3px;
+        background-color: purple;
+        border-radius: 3px;
+      "
+    />
     <script>
       // Get current page's name
-      const currentPage = window.location.pathname.split('/').pop();
+      const currentPage = window.location.pathname.split("/").pop();
       // Remove "active" class from all links
-      const navLinks = document.querySelectorAll('nav ul li a');
-      navLinks.forEach(link => link.classList.remove('active'));
+      const navLinks = document.querySelectorAll("nav ul li a");
+      navLinks.forEach((link) => link.classList.remove("active"));
       // Add "active" class to the current page's link
-      if (currentPage === 'about.html') {
-        document.getElementById('aboutLink').classList.add('active');
-      } else if (currentPage === 'services.html') {
-        document.getElementById('servicesLink').classList.add('active');
-      } else if (currentPage === 'projects.html') {
-        document.getElementById('projectsLink').classList.add('active');
-      } else if (currentPage === 'contact.html') {
-        document.getElementById('contactLink').classList.add('active');
+      if (currentPage === "about.html") {
+        document.getElementById("aboutLink").classList.add("active");
+      } else if (currentPage === "services.html") {
+        document.getElementById("servicesLink").classList.add("active");
+      } else if (currentPage === "projects.html") {
+        document.getElementById("projectsLink").classList.add("active");
+      } else if (currentPage === "contact.html") {
+        document.getElementById("contactLink").classList.add("active");
       } else {
-        document.getElementById('homeLink').classList.add('active');
+        document.getElementById("homeLink").classList.add("active");
       }
     </script>
   </body>

@@ -98,14 +98,14 @@
         height: 100%;
         object-fit: contain;
       }
-      .resume{
+      .resume {
         padding: 1%;
         color: purple;
         border-color: white;
         background-color: #6cd1f5;
         font-size: 1rem;
       }
-      .resume:hover{
+      .resume:hover {
         font-size: 1.02rem;
         background-color: #44c5f4;
       }
@@ -114,7 +114,15 @@
   <body>
     <header>
       <nav>
-        <div class="left">Welcome to My Portfolio <img src="asset/clipboard-with-pen.png" alt="" width="5%" style="margin-bottom: -1.2%;"></div>
+        <div class="left">
+          Welcome to My Portfolio
+          <img
+            src="asset/clipboard-with-pen.png"
+            alt=""
+            width="5%"
+            style="margin-bottom: -1.2%"
+          />
+        </div>
         <div class="right">
           <ul>
             <li><a href="index.html" id="homeLink">Home</a></li>
@@ -133,39 +141,66 @@
           <span id="element"></span>
           <div class="icons">
             <ul>
-              <a href="https://www.instagram.com/abbas______27/?igsh=bzVzaXB1OHBlY2tl#"><img src="asset/instagram.png" alt="" /></a>
+              <a
+                href="https://www.instagram.com/abbas______27/?igsh=bzVzaXB1OHBlY2tl#"
+                ><img src="asset/instagram.png" alt=""
+              /></a>
             </ul>
             <ul>
-              <a href="https://www.facebook.com/abbas.tati.7"><img src="asset/facebook.png" alt="" /></a>
+              <a href="https://www.facebook.com/abbas.tati.7"
+                ><img src="asset/facebook.png" alt=""
+              /></a>
             </ul>
             <ul>
-              <a href="https://www.linkedin.com/in/abbas-tati/"><img src="asset/linkedin.png" alt="" /></a>
+              <a href="https://www.linkedin.com/in/abbas-tati/"
+                ><img src="asset/linkedin.png" alt=""
+              /></a>
             </ul>
             <ul>
-              <a href="https://github.com/abbastati27"><img src="asset/github-sign.png" alt="" /></a>
+              <a href="https://github.com/abbastati27"
+                ><img src="asset/github-sign.png" alt=""
+              /></a>
             </ul>
           </div>
-          <div class="db"><a href="resume.pdf" download="Abbas_Tati_Resume" class="resume">Download Resume</a></div>
+          <div class="db">
+            <a href="resume.pdf" download="Abbas_Tati_Resume" class="resume"
+              >Download Resume</a
+            >
+          </div>
         </div>
-        
 
         <div class="rightSection">
-          <img src="asset/Blue Modern Tech Futuristic Woman Youtube Profile Picture.png" alt="" width="110%" height="110%" />
+          <img
+            src="asset/Blue Modern Tech Futuristic Woman Youtube Profile Picture.png"
+            alt=""
+            width="110%"
+            height="110%"
+          />
         </div>
       </section>
-      <hr style="margin-bottom: 2%; border-color: purple; width: 80%; margin-left: 10%; height: 3px; background-color: purple; border-radius: 3px;">
+      <hr
+        style="
+          margin-bottom: 2%;
+          border-color: purple;
+          width: 80%;
+          margin-left: 10%;
+          height: 3px;
+          background-color: purple;
+          border-radius: 3px;
+        "
+      />
     </main>
-    
 
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script>
       var typed = new Typed("#element", {
         strings: [
-          "Web Developer",
           "Data Scientist",
-          "ML Enthusiast",
-          "AI Engineer",
-          "Software Developer",
+          "ML Engineer",
+          "Deep Learning Expert",
+          "NLP and LLM Expert",
+          "CV Specialist",
+          "AI Developer",
           "Full-Stack Developer",
         ],
         typeSpeed: 50,
@@ -174,23 +209,23 @@
     </script>
     <script>
       // Get current page's name
-      const currentPage = window.location.pathname.split('/').pop();
+      const currentPage = window.location.pathname.split("/").pop();
 
       // Remove "active" class from all links
-      const navLinks = document.querySelectorAll('nav ul li a');
-      navLinks.forEach(link => link.classList.remove('active'));
+      const navLinks = document.querySelectorAll("nav ul li a");
+      navLinks.forEach((link) => link.classList.remove("active"));
 
       // Add "active" class to the current page's link
-      if (currentPage === 'about.html') {
-        document.getElementById('aboutLink').classList.add('active');
-      } else if (currentPage === 'services.html') {
-        document.getElementById('servicesLink').classList.add('active');
-      } else if (currentPage === 'projects.html') {
-        document.getElementById('projectsLink').classList.add('active');
-      } else if (currentPage === 'contact.html') {
-        document.getElementById('contactLink').classList.add('active');
+      if (currentPage === "about.html") {
+        document.getElementById("aboutLink").classList.add("active");
+      } else if (currentPage === "services.html") {
+        document.getElementById("servicesLink").classList.add("active");
+      } else if (currentPage === "projects.html") {
+        document.getElementById("projectsLink").classList.add("active");
+      } else if (currentPage === "contact.html") {
+        document.getElementById("contactLink").classList.add("active");
       } else {
-        document.getElementById('homeLink').classList.add('active');
+        document.getElementById("homeLink").classList.add("active");
       }
     </script>
   </body>
