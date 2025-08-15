@@ -152,6 +152,77 @@
         width: 110% !important;
         height: 110% !important;
       }
+      @media (max-width: 768px) {
+    nav {
+      flex-direction: column;
+      height: auto;
+      padding: 10px 0;
+    }
+
+    nav ul {
+      flex-wrap: wrap;
+      padding: 0;
+    }
+
+    nav ul li {
+      margin: 5px 10px;
+    }
+
+    .left {
+      font-size: 1.2rem;
+      margin-left: 0;
+      text-align: center;
+    }
+
+    /* About section stacking */
+    .aboutContent {
+      flex-direction: column;
+      text-align: center;
+      gap: 20px;
+    }
+
+    .aboutContent div {
+      width: 90% !important;
+    }
+
+    .aboutContent .rightSection img {
+      width: 100% !important;
+      height: auto !important;
+    }
+
+    /* Journey section */
+    .timeline {
+      font-size: 1rem;
+      padding-left: 10px;
+    }
+
+    /* What I Do section */
+    .whatIDoContent {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .whatIDoContent div {
+      width: 90% !important;
+    }
+
+    /* Fun facts text */
+    .funFacts {
+      font-size: 1rem;
+      padding: 0 10px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .aboutContent,
+    .whatIDoContent {
+      font-size: 1rem;
+    }
+
+    nav ul li a {
+      font-size: 0.9rem;
+    }
+  }
     </style>
   </head>
   <body>
