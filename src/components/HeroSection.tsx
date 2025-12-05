@@ -1,6 +1,13 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { Github, Linkedin, Instagram, Facebook, Download, ArrowDown } from "lucide-react";
+import {
+  Github,
+  Linkedin,
+  Instagram,
+  Facebook,
+  Download,
+  ArrowDown,
+} from "lucide-react";
 import profileImage from "@/assets/profile.jpg";
 const roles = [
   "AI Engineer",
@@ -223,45 +230,46 @@ const HeroSection = () => {
                 transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
               />
 
-              {/* 3rd ring */}
-              <motion.div
-                className="absolute inset-16 rounded-full border-2 border-primary/50"
-                animate={{ rotate: 360 }}
-                transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
-              />
-
               {/* Center glow */}
-              <div className="absolute inset-24 rounded-full bg-gradient-to-br from-primary/40 to-secondary/40 blur-xl" />
-              
+              <div className="absolute inset-5 rounded-full bg-gradient-to-br from-primary/40 to-secondary/40 blur-xl" />
+
               {/* Center content */}
-              <div className="absolute inset-24 rounded-full bg-card border-2 border-primary/50 overflow-hidden">
-                <img 
-                  src={profileImage} 
-                  alt="Abbas Tati" 
+              <div className="absolute inset-8 rounded-full bg-card border-2 border-primary/50 overflow-hidden">
+                <img
+                  src={profileImage}
+                  alt="Abbas Tati"
                   className="w-full h-full object-cover"
                 />
               </div>
 
-              {/* Floating nodes moved to OUTERMOST ring */}
-              {[...Array(6)].map((_, i) => (
-                <motion.div
-                  key={i}
-                  className="absolute w-3 h-3 rounded-full bg-primary drop-shadow-lg"
-                  style={{
-                    top: `${50 + 48 * Math.sin((i * 60 * Math.PI) / 180)}%`,
-                    left: `${50 + 48 * Math.cos((i * 60 * Math.PI) / 180)}%`,
-                  }}
-                  animate={{
-                    scale: [1, 1.5, 1],
-                    opacity: [0.5, 1, 0.5],
-                  }}
-                  transition={{
-                    duration: 2,
-                    repeat: Infinity,
-                    delay: i * 0.3,
-                  }}
-                />
-              ))}
+              {/* Floating nodes on outermost ring */}
+              {[...Array(6)].map((_, i) => {
+                const angle = (i * 60 * Math.PI) / 180;
+                const radius = 50;
+                const leftOffset = -1.5; // you already confirmed this is perfect horizontally
+                const topOffset = -1.8; // tweak upward (negative = up, positive = down)
+
+                return (
+                  <motion.div
+                    key={i}
+                    className="absolute w-3 h-3 rounded-full bg-primary drop-shadow-lg"
+                    style={{
+                      top: `${50 + radius * Math.sin(angle) + topOffset}%`,
+                      left: `${50 + radius * Math.cos(angle) + leftOffset}%`,
+                      transform: "translate(-50%, -50%)",
+                    }}
+                    animate={{
+                      scale: [1, 1.5, 1],
+                      opacity: [0.5, 1, 0.5],
+                    }}
+                    transition={{
+                      duration: 2,
+                      repeat: Infinity,
+                      delay: i * 0.3,
+                    }}
+                  />
+                );
+              })}
             </div>
           </motion.div>
         </div>
