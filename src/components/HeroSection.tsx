@@ -1,6 +1,13 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { Github, Linkedin, Instagram, Facebook, Download, ArrowDown } from "lucide-react";
+import {
+  Github,
+  Linkedin,
+  Instagram,
+  Facebook,
+  Download,
+  ArrowDown,
+} from "lucide-react";
 
 const roles = [
   "AI Engineer",
@@ -13,9 +20,21 @@ const roles = [
 
 const socialLinks = [
   { icon: Github, href: "https://github.com/abbastati27", label: "GitHub" },
-  { icon: Linkedin, href: "https://www.linkedin.com/in/abbas-tati/", label: "LinkedIn" },
-  { icon: Instagram, href: "https://www.instagram.com/abbas______27/", label: "Instagram" },
-  { icon: Facebook, href: "https://www.facebook.com/abbas.tati.7", label: "Facebook" },
+  {
+    icon: Linkedin,
+    href: "https://www.linkedin.com/in/abbas-tati/",
+    label: "LinkedIn",
+  },
+  {
+    icon: Instagram,
+    href: "https://www.instagram.com/abbas______27/",
+    label: "Instagram",
+  },
+  {
+    icon: Facebook,
+    href: "https://www.facebook.com/abbas.tati.7",
+    label: "Facebook",
+  },
 ];
 
 const HeroSection = () => {
@@ -56,7 +75,7 @@ const HeroSection = () => {
       {/* Background effects */}
       <div className="absolute inset-0 bg-grid opacity-30" />
       <div className="absolute inset-0 hero-gradient" />
-      
+
       {/* Animated gradient orbs */}
       <motion.div
         className="absolute top-1/4 -left-32 w-96 h-96 bg-primary/20 rounded-full blur-3xl"
@@ -110,8 +129,7 @@ const HeroSection = () => {
               transition={{ delay: 0.3 }}
               className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6"
             >
-              Hi, I'm{" "}
-              <span className="gradient-text">Abbas Tati</span>
+              Hi, I'm <span className="gradient-text">Abbas Tati</span>
             </motion.h1>
 
             <motion.div
@@ -130,9 +148,9 @@ const HeroSection = () => {
               transition={{ delay: 0.5 }}
               className="text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0 mb-8"
             >
-              Passionate about building intelligent systems and transforming data into 
-              actionable insights. Specializing in Machine Learning, Deep Learning, 
-              NLP, and Full-Stack Development.
+              Passionate about building intelligent systems and transforming
+              data into actionable insights. Specializing in Machine Learning,
+              Deep Learning, NLP, and Full-Stack Development.
             </motion.p>
 
             {/* Social links */}
@@ -172,7 +190,9 @@ const HeroSection = () => {
                 href="#projects"
                 onClick={(e) => {
                   e.preventDefault();
-                  document.querySelector("#projects")?.scrollIntoView({ behavior: "smooth" });
+                  document
+                    .querySelector("#projects")
+                    ?.scrollIntoView({ behavior: "smooth" });
                 }}
                 className="btn-primary w-full sm:w-auto"
               >
@@ -196,46 +216,47 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
           >
             <div className="relative w-72 h-72 sm:w-96 sm:h-96 mx-auto">
-              {/* Outer ring */}
+              {/* 1st (Outer) ring */}
               <motion.div
                 className="absolute inset-0 rounded-full border-2 border-primary/30"
                 animate={{ rotate: 360 }}
                 transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
               />
-              
-              {/* Middle ring */}
+
+              {/* 2nd ring */}
               <motion.div
                 className="absolute inset-8 rounded-full border-2 border-secondary/30"
                 animate={{ rotate: -360 }}
                 transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
               />
-              
-              {/* Inner ring */}
+
+              {/* 3rd ring */}
               <motion.div
                 className="absolute inset-16 rounded-full border-2 border-primary/50"
                 animate={{ rotate: 360 }}
                 transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
               />
 
-              {/* Center glow */}
-              <div className="absolute inset-24 rounded-full bg-gradient-to-br from-primary/40 to-secondary/40 blur-xl" />
-              
-              {/* Center content */}
-              <div className="absolute inset-24 rounded-full bg-card border border-border flex items-center justify-center">
-                <div className="text-center">
-                  <span className="font-mono text-4xl font-bold gradient-text">AI</span>
-                  <p className="text-xs text-muted-foreground mt-1">Engineer</p>
-                </div>
+              {/* Light shade between 1st & 2nd ring */}
+              <div className="absolute inset-4 rounded-full bg-gradient-to-br from-primary/30 to-secondary/30 blur-xl" />
+
+              {/* Center image (after 2nd lane) */}
+              <div className="absolute inset-10 rounded-full bg-card border border-border flex items-center justify-center overflow-hidden">
+                <img
+                  src="/Profile.jpg"
+                  alt="Profile"
+                  className="w-full h-full object-cover rounded-full"
+                />
               </div>
 
-              {/* Floating nodes */}
+              {/* Floating nodes moved to OUTERMOST ring */}
               {[...Array(6)].map((_, i) => (
                 <motion.div
                   key={i}
-                  className="absolute w-3 h-3 rounded-full bg-primary"
+                  className="absolute w-3 h-3 rounded-full bg-primary drop-shadow-lg"
                   style={{
-                    top: `${50 + 45 * Math.sin((i * 60 * Math.PI) / 180)}%`,
-                    left: `${50 + 45 * Math.cos((i * 60 * Math.PI) / 180)}%`,
+                    top: `${50 + 48 * Math.sin((i * 60 * Math.PI) / 180)}%`,
+                    left: `${50 + 48 * Math.cos((i * 60 * Math.PI) / 180)}%`,
                   }}
                   animate={{
                     scale: [1, 1.5, 1],
@@ -263,7 +284,9 @@ const HeroSection = () => {
             href="#about"
             onClick={(e) => {
               e.preventDefault();
-              document.querySelector("#about")?.scrollIntoView({ behavior: "smooth" });
+              document
+                .querySelector("#about")
+                ?.scrollIntoView({ behavior: "smooth" });
             }}
             className="flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
             animate={{ y: [0, 8, 0] }}

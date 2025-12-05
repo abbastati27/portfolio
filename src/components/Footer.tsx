@@ -49,7 +49,7 @@ const Footer = () => {
           {/* Copyright */}
           <div className="text-center md:text-right">
             <p className="text-sm text-muted-foreground flex items-center justify-center md:justify-end gap-1">
-              Made with <Heart className="w-4 h-4 text-red-500 fill-red-500" /> by Abbas Tati
+              Made by Abbas Tati
             </p>
             <p className="text-xs text-muted-foreground mt-1">
               © {currentYear} All Rights Reserved
