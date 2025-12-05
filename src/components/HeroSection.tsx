@@ -1,14 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import {
-  Github,
-  Linkedin,
-  Instagram,
-  Facebook,
-  Download,
-  ArrowDown,
-} from "lucide-react";
-
+import { Github, Linkedin, Instagram, Facebook, Download, ArrowDown } from "lucide-react";
+import profileImage from "@/assets/profile.jpg";
 const roles = [
   "AI Engineer",
   "Data Scientist",
@@ -237,15 +230,15 @@ const HeroSection = () => {
                 transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
               />
 
-              {/* Light shade between 1st & 2nd ring */}
-              <div className="absolute inset-4 rounded-full bg-gradient-to-br from-primary/30 to-secondary/30 blur-xl" />
-
-              {/* Center image (after 2nd lane) */}
-              <div className="absolute inset-10 rounded-full bg-card border border-border flex items-center justify-center overflow-hidden">
-                <img
-                  src="/Profile.jpg"
-                  alt="Profile"
-                  className="w-full h-full object-cover rounded-full"
+              {/* Center glow */}
+              <div className="absolute inset-24 rounded-full bg-gradient-to-br from-primary/40 to-secondary/40 blur-xl" />
+              
+              {/* Center content */}
+              <div className="absolute inset-24 rounded-full bg-card border-2 border-primary/50 overflow-hidden">
+                <img 
+                  src={profileImage} 
+                  alt="Abbas Tati" 
+                  className="w-full h-full object-cover"
                 />
               </div>
 
