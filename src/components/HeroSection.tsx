@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Github, Linkedin, Instagram, Facebook, Download, ArrowDown } from "lucide-react";
-
+import profileImage from "@/assets/profile.jpg";
 const roles = [
   "AI Engineer",
   "Data Scientist",
@@ -221,11 +221,12 @@ const HeroSection = () => {
               <div className="absolute inset-24 rounded-full bg-gradient-to-br from-primary/40 to-secondary/40 blur-xl" />
               
               {/* Center content */}
-              <div className="absolute inset-24 rounded-full bg-card border border-border flex items-center justify-center">
-                <div className="text-center">
-                  <span className="font-mono text-4xl font-bold gradient-text">AI</span>
-                  <p className="text-xs text-muted-foreground mt-1">Engineer</p>
-                </div>
+              <div className="absolute inset-24 rounded-full bg-card border-2 border-primary/50 overflow-hidden">
+                <img 
+                  src={profileImage} 
+                  alt="Abbas Tati" 
+                  className="w-full h-full object-cover"
+                />
               </div>
 
               {/* Floating nodes */}
