@@ -201,11 +201,9 @@ const HeroSection = () => {
                 View My Work
               </a>
               <a
-                href="%BASE_URL%resume.pdf"
+                href={import.meta.env.BASE_URL + "resume.pdf"}
                 download="Abbas-Tati-Resume.pdf"
-                className="btn-outline w-full sm:w-auto flex items-center justify-center gap-2"
               >
-                <Download className="w-4 h-4" />
                 Download Resume
               </a>
             </motion.div>
