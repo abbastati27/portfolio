@@ -142,15 +142,7 @@ const ProjectModal = ({ project, isOpen, onClose }: ProjectModalProps) => {
                       <Github className="w-4 h-4" />
                       View Source Code
                     </a>
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="btn-outline inline-flex items-center gap-2"
-                    >
-                      <ExternalLink className="w-4 h-4" />
-                      Live Demo
-                    </a>
+                    
                   </div>
                 </div>
               </div>

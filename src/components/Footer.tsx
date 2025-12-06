@@ -24,7 +24,7 @@ const Footer = () => {
               <span className="font-semibold">Abbas Tati</span>
             </div>
             <p className="text-sm text-muted-foreground">
-              AI Engineer & Full-Stack Developer
+              AI/ML Engineer & Data Scientist
             </p>
           </div>
 

@@ -6,41 +6,48 @@ import { Brain, Database, Eye, MessageSquare, Globe, Sparkles } from "lucide-rea
 const services = [
   {
     icon: Database,
-    title: "Data Science",
-    description: "I provide data science services such as data analysis, machine learning model building, and data visualization to help you extract valuable insights from your data and make data-driven decisions.",
-    technologies: ["Pandas", "NumPy", "Matplotlib", "Seaborn", "EDA"],
+    title: "Data Science & Analytics",
+    description:
+      "I perform end-to-end data analysis, preprocessing, feature engineering, and model evaluation to extract actionable insights. My focus is on turning raw data into meaningful intelligence that supports real-world decision-making.",
+    technologies: ["Pandas", "NumPy", "Matplotlib", "EDA", "Feature Engineering"],
   },
   {
     icon: Brain,
-    title: "Machine Learning",
-    description: "I build intelligent systems with machine learning algorithms. From model training to deployment, I help create solutions for classification, regression, and recommendation tasks.",
-    technologies: ["Scikit-learn", "XGBoost", "Random Forest", "SVM", "Regression"],
+    title: "Machine Learning Solutions",
+    description:
+      "I build and deploy machine learning models for classification, regression, forecasting, and decision systems. From data preparation to production deployment, I create reliable ML pipelines tailored to specific problem statements.",
+    technologies: ["Scikit-learn", "Regression Models", "Classification Models", "Model Deployment"],
   },
   {
     icon: Sparkles,
-    title: "Deep Learning",
-    description: "I design and train deep neural networks for tasks such as image recognition, natural language understanding, and predictive analytics using state-of-the-art architectures.",
-    technologies: ["TensorFlow", "Keras", "PyTorch", "CNNs", "Transformers"],
+    title: "Deep Learning & Neural Networks",
+    description:
+      "I design and train deep learning models including CNNs, RNNs, Seq2Seq architectures, and Transformer-based systems. I work extensively on image, text, and sequence modeling for high-impact AI applications.",
+    technologies: ["TensorFlow", "Keras", "PyTorch", "CNNs", "Seq2Seq", "Transformers"],
   },
   {
     icon: MessageSquare,
-    title: "NLP & LLM Solutions",
-    description: "I develop advanced Natural Language Processing applications, including sentiment analysis, text summarization, and conversational AI systems using Large Language Models.",
-    technologies: ["GPT", "BERT", "Langchain", "Hugging Face", "RAG"],
+    title: "NLP & LLM Engineering",
+    description:
+      "I build NLP and LLM-powered applications including chatbots, text-generation tools, semantic search, summarization systems, and AI-driven automation. I specialize in RAG pipelines, LangChain workflows, and production-ready LLM integrations.",
+    technologies: ["GPT", "LangChain", "Supabase Vector DB", "RAG", "LLMs"],
   },
   {
     icon: Eye,
-    title: "Computer Vision",
-    description: "I build computer vision solutions for object detection, image classification, and OCR, enabling automation and intelligent visual understanding for your projects.",
-    technologies: ["OpenCV", "YOLO", "ResNet", "Image Segmentation", "OCR"],
+    title: "Computer Vision & OCR",
+    description:
+      "I create computer vision solutions for image classification, face detection, wavelet-based feature extraction, and OCR-driven data pipelines. These systems help automate visual understanding and real-time decision-making.",
+    technologies: ["OpenCV", "Haar Cascades", "Wavelet Transform", "CNNs", "OCR"],
   },
   {
     icon: Globe,
-    title: "Full-Stack Development",
-    description: "I design and build complete web applications from scratch, covering both front-end user experience and back-end server logic with modern, scalable solutions.",
-    technologies: ["React", "Node.js", "Flask", "MongoDB", "REST APIs"],
+    title: "AI Applications & Automation",
+    description:
+      "I develop complete AI-powered applications using Flask, Streamlit, and workflow platforms like n8n. I also build Retell AI voice agents, automated pipelines, WhatsApp integrations, email workflows, and production-ready AI tools.",
+    technologies: ["Flask", "Streamlit", "n8n", "Retell AI", "Supabase", "REST APIs"],
   },
 ];
+
 
 const ServicesSection = () => {
   const ref = useRef(null);

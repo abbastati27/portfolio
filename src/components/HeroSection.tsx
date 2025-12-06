@@ -8,13 +8,13 @@ import {
   Download,
   ArrowDown,
 } from "lucide-react";
-import profileImage from "@/assets/profile.jpg";
+import profileImage from "@/assets/profile2.jpg";
 const roles = [
-  "AI Engineer",
+  "AI/ML Engineer",
   "Data Scientist",
   "ML Engineer",
-  "Deep Learning Expert",
-  "NLP Specialist",
+  "Deep Learning Engineer",
+  "NLP & LLM Developer",
   "Full-Stack Developer",
 ];
 
@@ -102,7 +102,7 @@ const HeroSection = () => {
         }}
       />
 
-      <div className="section-container relative z-10">
+      <div className="w-full max-w-[1200px] px-12 mx-auto relative z-10">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
           {/* Left content */}
           <motion.div
@@ -148,9 +148,11 @@ const HeroSection = () => {
               transition={{ delay: 0.5 }}
               className="text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0 mb-8"
             >
-              Passionate about building intelligent systems and transforming
-              data into actionable insights. Specializing in Machine Learning,
-              Deep Learning, NLP, and Full-Stack Development.
+              Passionate about building intelligent, end-to-end AI systems that
+              solve real-world problems. Specialized in Machine Learning, Deep
+              Learning, NLP, and LLM-powered applications, with experience in
+              deploying scalable AI solutions across web and automation
+              platforms.
             </motion.p>
 
             {/* Social links */}
@@ -199,7 +201,8 @@ const HeroSection = () => {
                 View My Work
               </a>
               <a
-                href="#"
+                href="/resume.pdf"
+                download="Abbas-Tati-Resume.pdf"
                 className="btn-outline w-full sm:w-auto flex items-center justify-center gap-2"
               >
                 <Download className="w-4 h-4" />

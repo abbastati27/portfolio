@@ -4,28 +4,181 @@ import { useRef } from "react";
 import { Code2, Brain, Database, Cloud, Cpu, Globe } from "lucide-react";
 
 const journey = [
-  { year: "2025", title: "Graduated from BMCC Pune", description: "Expertise in AI, Data Science, and Full-Stack Development" },
-  { year: "2024", title: "Advanced LLM Projects", description: "Explored Large Language Models and advanced AI applications" },
-  { year: "2023", title: "NLP & Computer Vision", description: "Developed chatbots, classifiers, and vision systems" },
-  { year: "2022", title: "ML & DL Foundation", description: "Built strong foundations in Machine Learning and Deep Learning" },
-  { year: "2020-21", title: "Programming Journey", description: "Started with Python, SQL, HTML, CSS, and JavaScript" },
+  {
+    year: "2025",
+    title: "AI/ML Engineer Internship at AppSynergies",
+    description:
+      "Built production-grade RAG systems, LLM workflows, AI voice agents, automations, and full AI pipelines.",
+  },
+  {
+    year: "2025",
+    title: "Graduated from BMCC Pune",
+    description:
+      "Strengthened expertise in Programming, Database Management, end-to-end Applications Development.",
+  },
+  {
+    year: "2024",
+    title: "Data Scientist Internship at Bharti Airtel Ltd.",
+    description:
+      "Worked on real-world data workflows, predictive modeling, and enterprise-level analytical tasks.",
+  },
+  {
+    year: "2024",
+    title: "Advanced LLM Projects",
+    description:
+      "Explored Large Language Models, RAG architectures, LangChain, and end-to-end AI applications.",
+  },
+  {
+    year: "2023",
+    title: "NLP & Computer Vision",
+    description:
+      "Developed chatbots, classification models, CNN systems, and image-processing applications.",
+  },
+  {
+    year: "2022",
+    title: "ML & DL Foundation",
+    description:
+      "Built strong foundations in Machine Learning, Deep Learning, Python, and applied AI concepts.",
+  },
+  {
+    year: "2020-21",
+    title: "Programming Journey Begins",
+    description:
+      "Started with Python, SQL, HTML, CSS, and JavaScript—forming the base for future AI development.",
+  },
+];
+
+const experience = [
+  {
+    role: "AI/ML Intern",
+    company: "AppSynergies Technologies Ltd., London (Remote)",
+    duration: "October 2025 – Present",
+    details: [
+      "Built complete RAG pipelines using Supabase Vector DB + LangChain + n8n for ingestion, embeddings, retrieval, and GPT-based answering.",
+      "Designed Retell AI voice agents for appointments, consultancy workflows, support calls, and feedback systems.",
+      "Integrated Retell AI with n8n, WhatsApp Cloud API, Email APIs, and Supabase automations.",
+      "Developed an OCR Data Extractor using Streamlit + Python + LangChain, deployed on Render and automated via n8n.",
+      "Built full-page scraping workflows in n8n integrated with LLMs and Supabase.",
+      "Delivered end-to-end marketing automations using AI Calling + WhatsApp + Email + Supabase triggers.",
+      "Created a complete AI Proposal Generator including logic, formatting, retrieval, and workflow testing.",
+      "Contributed to research on Odoo, image-generation models, and workflow pricing systems.",
+    ],
+  },
+  {
+    role: "Data Science Intern",
+    company: "Bharti Airtel Ltd., Gurugram",
+    duration: "Feb 2024 – April 2024",
+    details: [
+      "Assisted in building an LLM-driven multi-agent framework to configure and analyze Prepaid, Postpaid, DTH, and bundled plans.",
+      "Prepared plan-level datasets, performed cleaning, exploratory analysis, and supported model evaluations.",
+      "Collaborated with senior engineers to integrate APIs for dynamic plan configuration and data retrieval.",
+    ],
+  },
 ];
 
 const skills = [
-  { category: "Languages", items: ["Python", "JavaScript", "TypeScript", "SQL", "PHP"], icon: Code2 },
-  { category: "ML/AI", items: ["TensorFlow", "PyTorch", "Keras", "Scikit-learn", "OpenAI"], icon: Brain },
-  { category: "Data", items: ["Pandas", "NumPy", "Matplotlib", "EDA", "SQL"], icon: Database },
-  { category: "Web", items: ["React", "Node.js", "Flask", "HTML/CSS", "REST APIs"], icon: Globe },
-  { category: "Deep Learning", items: ["CNNs", "RNNs", "Transformers", "LLMs", "GANs"], icon: Cpu },
-  { category: "Cloud & Tools", items: ["Git", "Docker", "XAMPP", "MongoDB", "MySQL"], icon: Cloud },
+  {
+    category: "Programming Languages",
+    items: [
+      "Python",
+      "C",
+      "C++",
+      "Java",
+      "JavaScript",
+      "TypeScript",
+      "SQL",
+      "PHP",
+    ],
+    icon: Code2,
+  },
+  {
+    category: "Machine Learning & Deep Learning",
+    items: [
+      "Machine Learning",
+      "Deep Learning",
+      "TensorFlow",
+      "Keras",
+      "PyTorch",
+      "Scikit-learn",
+      "CNNs",
+      "RNNs",
+      "Seq2Seq Models",
+      "Transformers",
+      "LLMs",
+      "NLP",
+      "Prompt Engineering",
+    ],
+    icon: Brain,
+  },
+  {
+    category: "RAG, LLM Systems & AI Pipelines",
+    items: [
+      "LangChain",
+      "RAG Pipelines",
+      "Supabase Vector DB",
+      "Embedding Models",
+      "OCR Processing",
+      "LLM Workflow Design",
+      "AI Proposal Generators",
+      "Document Ingestion Pipelines",
+    ],
+    icon: Cpu,
+  },
+  {
+    category: "Data Handling & Visualization",
+    items: [
+      "Pandas",
+      "NumPy",
+      "Matplotlib",
+      "EDA",
+      "Data Preprocessing",
+      "Feature Engineering",
+      "Web Scraping",
+    ],
+    icon: Database,
+  },
+  {
+    category: "Web Development & Deployment",
+    items: [
+      "Flask",
+      "Streamlit",
+      "React",
+      "Node.js",
+      "AngularJS",
+      "HTML/CSS/JavaScript",
+      "REST APIs",
+      "CORS",
+      "XAMPP",
+      "Render Deployment",
+      "Tomcat",
+    ],
+    icon: Globe,
+  },
+  {
+    category: "Tools, Platforms & Automation",
+    items: [
+      "Git",
+      "Docker",
+      "MySQL",
+      "Supabase",
+      "n8n",
+      "Retell AI",
+      "WhatsApp Cloud API",
+      "Email API Automation",
+      "Supabase Automations",
+    ],
+    icon: Cloud,
+  },
 ];
 
 const funFacts = [
-  "⚽ Competitive football player",
-  "💻 Love building apps from scratch to deployment",
-  "🧠 Passionate about ethical AI",
-  "📚 Constant learner of new tech",
-  "🌍 Enjoy collaborating on impactful projects",
+  "⚽ Competitive football athlete with a passion for teamwork",
+  "💡 Build AI systems from concept to deployment — end-to-end engineer",
+  "🤖 Love experimenting with LLMs, RAG pipelines, and automation workflows",
+  "🧠 Strong interest in human-centered, and ethical AI development",
+  "📚 Constant learner exploring emerging models, tools, and technologies",
+  "🚀 Enjoy transforming ideas into real, usable products",
+  "🌍 Motivated by meaningful, high-impact projects that help people",
 ];
 
 const AboutSection = () => {
@@ -36,7 +189,7 @@ const AboutSection = () => {
     <section id="about" className="py-24 relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-grid opacity-20" />
-      
+
       <div className="section-container relative z-10" ref={ref}>
         {/* Section header */}
         <motion.div
@@ -49,10 +202,12 @@ const AboutSection = () => {
             About Me
           </span>
           <h2 className="section-heading">
-            Turning Data into <span className="gradient-text">Intelligence</span>
+            Turning Data into{" "}
+            <span className="gradient-text">Intelligence</span>
           </h2>
           <p className="section-subheading mx-auto">
-            An aspiring AI Engineer passionate about building intelligent and user-focused digital solutions.
+            An aspiring AI/ML Engineer passionate about building intelligent and
+            user-focused digital solutions.
           </p>
         </motion.div>
 
@@ -68,21 +223,42 @@ const AboutSection = () => {
             <h3 className="text-2xl font-bold mb-6">Who I Am</h3>
             <div className="space-y-4 text-muted-foreground">
               <p>
-                I'm <span className="text-foreground font-semibold">Abbas Tati</span>, an aspiring{" "}
-                <span className="text-primary">AI Engineer</span> and{" "}
-                <span className="text-primary">Full-Stack Developer</span> with a strong passion for 
-                building intelligent and user-focused digital solutions.
+                I'm{" "}
+                <span className="text-foreground font-semibold">
+                  Abbas Tati
+                </span>
+                , an <span className="text-primary">AI/ML Engineer</span>{" "}
+                dedicated to building intelligent, end-to-end systems that solve
+                real-world problems with clarity, efficiency, and impact.
               </p>
+
               <p>
-                I specialize in <span className="text-foreground">Machine Learning</span>,{" "}
+                I work across{" "}
+                <span className="text-foreground">Machine Learning</span>,{" "}
                 <span className="text-foreground">Deep Learning</span>,{" "}
                 <span className="text-foreground">NLP</span>, and{" "}
-                <span className="text-foreground">LLMs</span>. My goal is to design impactful 
-                applications that make technology more accessible.
+                <span className="text-foreground">LLM-driven applications</span>
+                , designing solutions that bridge the gap between advanced AI
+                models and seamless user experiences. My focus is on creating
+                practical, accessible, and production-ready AI products.
               </p>
+
               <p>
-                Beyond tech, I'm a <span className="text-foreground">sports enthusiast</span> who 
-                thrives in teamwork — a value I carry into every project I work on.
+                Over the years, I've built a wide range of AI systems — from RAG
+                pipelines and LLM workflows to computer vision applications,
+                automation tools, and research-driven prototypes. I enjoy
+                turning complex ideas into functional solutions that people can
+                actually use.
+              </p>
+
+              <p>
+                Beyond technology, I'm a{" "}
+                <span className="text-foreground">
+                  dedicated sports enthusiast
+                </span>{" "}
+                who values discipline, teamwork, and continuous improvement —
+                qualities that influence how I learn, collaborate, and approach
+                every project.
               </p>
             </div>
 
@@ -124,7 +300,7 @@ const AboutSection = () => {
                   className="relative mb-8 last:mb-0"
                 >
                   <div className="timeline-dot" />
-                  <span className="font-mono text-primary text-sm font-semibold">
+                  <span className="ml-3 font-mono text-primary text-sm font-semibold">
                     {item.year}
                   </span>
                   <h4 className="font-semibold mt-1">{item.title}</h4>
@@ -137,13 +313,53 @@ const AboutSection = () => {
           </motion.div>
         </div>
 
+        {/* Work Experience */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.35 }}
+          className="mb-20"
+        >
+          <h3 className="text-2xl font-bold text-center mb-8">
+            Work Experience
+          </h3>
+
+          <div className="grid lg:grid-cols-2 gap-8">
+            {experience.map((exp, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ delay: 0.4 + index * 0.1 }}
+                className="glass-card p-8"
+              >
+                <h4 className="text-xl font-semibold">{exp.role}</h4>
+                <p className="text-primary font-medium">{exp.company}</p>
+                <p className="text-sm text-muted-foreground mb-4">
+                  {exp.duration}
+                </p>
+
+                <ul className="space-y-2 text-muted-foreground">
+                  {exp.details.map((point, i) => (
+                    <li key={i} className="text-sm leading-relaxed">
+                      • {point}
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
         {/* Skills */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-          <h3 className="text-2xl font-bold text-center mb-8">Technical Skills</h3>
+          <h3 className="text-2xl font-bold text-center mb-8">
+            Technical Skills
+          </h3>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {skills.map((skillGroup, index) => (
               <motion.div

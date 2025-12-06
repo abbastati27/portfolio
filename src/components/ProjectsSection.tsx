@@ -180,7 +180,7 @@ const ProjectsSection = () => {
           className="text-center mb-12"
         >
           <span className="inline-block px-4 py-1 rounded-full bg-primary/10 border border-primary/30 text-primary text-sm font-medium mb-4">
-            Portfolio
+            Projects
           </span>
           <h2 className="section-heading">
             Featured <span className="gradient-text">Projects</span>
