@@ -50,7 +50,7 @@ const journey = [
 
 const experience = [
   {
-    role: "AI/ML Intern",
+    role: "AI/ML Engineer",
     company: "AppSynergies Technologies Ltd., London (Remote)",
     duration: "October 2025 – Present",
     details: [
