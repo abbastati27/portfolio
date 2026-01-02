@@ -14,7 +14,7 @@ const projects = [
     image:
       "https://images.unsplash.com/photo-1517832606299-7ae9b720a186?w=600&q=80",
     tags: ["n8n", "Automation", "LLM", "API Integration"],
-    github: "",
+    github: "https://github.com/abbastati27",
     category: "AI/ML",
     features: [
       {
@@ -58,7 +58,7 @@ const projects = [
     fullDescription:
       "CareerPathAI is an intelligent career counseling chatbot built using large language models (LLMs) that guides students in identifying suitable career paths based on their academic background, interests, and skill sets. The bot uses contextual reasoning and real-world examples to suggest courses, specializations, and career opportunities.",
     image:
-      "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&q=80",
+      "../assets/career.jfif",
     tags: ["Python", "LangChain", "Streamlit", "LLM"],
     github: "https://github.com/abbastati27/careerpath-ai",
     category: "AI/ML",
