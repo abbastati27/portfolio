@@ -5,6 +5,12 @@ import { Code2, Brain, Database, Cloud, Cpu, Globe } from "lucide-react";
 
 const journey = [
   {
+    year: "2026",
+    title: "AI Engineer – AppSynergies (Full Time)",
+    description:
+      "Converted from internship to full-time role. Built AI agents, CRM automations, and intelligent workflows using n8n, ManyChat, Zoho, Supabase, Make, Retell AI, and LLM-based systems.",
+  },
+  {
     year: "2025",
     title: "AI/ML Engineer Internship at AppSynergies",
     description:
@@ -78,6 +84,20 @@ const experience = [
 
 const skills = [
   {
+    category: "RAG, LLM Systems & AI Pipelines",
+    items: [
+      "LangChain",
+      "RAG Pipelines",
+      "Supabase Vector DB",
+      "Embedding Models",
+      "OCR Processing",
+      "LLM Workflow Design",
+      "AI Proposal Generators",
+      "Document Ingestion Pipelines",
+    ],
+    icon: Cpu,
+  },
+  {
     category: "Programming Languages",
     items: [
       "Python",
@@ -109,20 +129,6 @@ const skills = [
       "Prompt Engineering",
     ],
     icon: Brain,
-  },
-  {
-    category: "RAG, LLM Systems & AI Pipelines",
-    items: [
-      "LangChain",
-      "RAG Pipelines",
-      "Supabase Vector DB",
-      "Embedding Models",
-      "OCR Processing",
-      "LLM Workflow Design",
-      "AI Proposal Generators",
-      "Document Ingestion Pipelines",
-    ],
-    icon: Cpu,
   },
   {
     category: "Data Handling & Visualization",

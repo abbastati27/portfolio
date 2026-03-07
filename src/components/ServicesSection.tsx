@@ -5,6 +5,13 @@ import { Brain, Database, Eye, MessageSquare, Globe, Sparkles } from "lucide-rea
 
 const services = [
   {
+    icon: MessageSquare,
+    title: "NLP & LLM Engineering",
+    description:
+      "I build NLP and LLM-powered applications including chatbots, text-generation tools, semantic search, summarization systems, and AI-driven automation. I specialize in RAG pipelines, LangChain workflows, and production-ready LLM integrations.",
+    technologies: ["GPT", "LangChain", "Supabase Vector DB", "RAG", "LLMs"],
+  },
+  {
     icon: Database,
     title: "Data Science & Analytics",
     description:
@@ -24,13 +31,6 @@ const services = [
     description:
       "I design and train deep learning models including CNNs, RNNs, Seq2Seq architectures, and Transformer-based systems. I work extensively on image, text, and sequence modeling for high-impact AI applications.",
     technologies: ["TensorFlow", "Keras", "PyTorch", "CNNs", "Seq2Seq", "Transformers"],
-  },
-  {
-    icon: MessageSquare,
-    title: "NLP & LLM Engineering",
-    description:
-      "I build NLP and LLM-powered applications including chatbots, text-generation tools, semantic search, summarization systems, and AI-driven automation. I specialize in RAG pipelines, LangChain workflows, and production-ready LLM integrations.",
-    technologies: ["GPT", "LangChain", "Supabase Vector DB", "RAG", "LLMs"],
   },
   {
     icon: Eye,
