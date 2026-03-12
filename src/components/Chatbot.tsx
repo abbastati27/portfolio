@@ -26,7 +26,10 @@ export default function Chatbot() {
 
     if (!input.trim()) return
 
-    const userMessage = { role: "user", content: input }
+  const formattedInput =
+    input.charAt(0).toUpperCase() + input.slice(1)
+
+  const userMessage = { role: "user", content: formattedInput }
 
     setMessages(prev => [...prev, userMessage])
     setInput("")
@@ -41,7 +44,7 @@ export default function Chatbot() {
         },
         body: JSON.stringify({
           session_id,
-          message: input
+          message: formattedInput
         })
       })
 
@@ -109,7 +112,7 @@ export default function Chatbot() {
 
               <div
                 key={i}
-                className={`max-w-[85%] px-3 py-2 rounded-lg leading-relaxed ${
+                className={`max-w-[85%] px-4 py-3 rounded-lg leading-relaxed text-[14px] break-words ${
                   msg.role === "user"
                     ? "ml-auto bg-primary text-primary-foreground"
                     : "mr-auto bg-muted text-foreground"
@@ -117,7 +120,7 @@ export default function Chatbot() {
               >
                 {msg.role === "assistant" ? (
 
-                  <div className="prose prose-sm max-w-none prose-p:my-1 prose-li:my-0">
+                  <div className="prose prose-sm max-w-none prose-p:my-2 prose-ul:my-2 prose-li:my-1 prose-headings:my-2">
 
                     <ReactMarkdown>
                       {msg.content}
