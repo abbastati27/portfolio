@@ -18,6 +18,8 @@ const roles = [
   "Full-Stack Developer",
 ];
 
+const API_URL = "https://portfolio-cb-backend.onrender.com";
+
 const socialLinks = [
   { icon: Github, href: "https://github.com/abbastati27", label: "GitHub" },
   {
@@ -66,6 +68,13 @@ const HeroSection = () => {
 
     return () => clearTimeout(timeout);
   }, [displayText, isDeleting, currentRole]);
+
+  useEffect(() => {
+    fetch(API_URL, {
+      method: "GET",
+      mode: "no-cors"
+    });
+  }, []);
 
   return (
     <section
