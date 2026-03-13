@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react"
 import ReactMarkdown from "react-markdown"
+import remarkGfm from "remark-gfm"
 
 const API_URL = "https://portfolio-cb-backend.onrender.com/chat"
 
@@ -20,16 +21,16 @@ export default function Chatbot() {
 
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" })
-  }, [messages, loading])
+  }, [messages])
 
   const sendMessage = async () => {
 
     if (!input.trim()) return
 
-  const formattedInput =
-    input.charAt(0).toUpperCase() + input.slice(1)
+    const formattedInput =
+      input.charAt(0).toUpperCase() + input.slice(1)
 
-  const userMessage = { role: "user", content: formattedInput }
+    const userMessage = { role: "user", content: formattedInput }
 
     setMessages(prev => [...prev, userMessage])
     setInput("")
@@ -39,23 +40,50 @@ export default function Chatbot() {
 
       const res = await fetch(API_URL, {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           session_id,
           message: formattedInput
         })
       })
 
-      const data = await res.json()
+      const reader = res.body?.getReader()
+      const decoder = new TextDecoder()
 
-      const botMessage = {
-        role: "assistant",
-        content: data.answer
-      }
+      let botText = ""
+
+      const botMessage = { role: "assistant", content: "" }
 
       setMessages(prev => [...prev, botMessage])
+
+      while (true) {
+
+        const { done, value } = await reader!.read()
+
+        if (done) break
+
+        const chunk = decoder.decode(value)
+
+        botText += chunk
+
+        setMessages(prev => {
+          const updated = [...prev]
+          updated[updated.length - 1] = {
+            role: "assistant",
+            content: botText + "▌"
+          }
+          return updated
+        })
+      }
+
+      setMessages(prev => {
+        const updated = [...prev]
+        updated[updated.length - 1] = {
+          role: "assistant",
+          content: botText
+        }
+        return updated
+      })
 
     } catch {
 
@@ -74,8 +102,6 @@ export default function Chatbot() {
 
   return (
     <>
-      {/* Floating Button */}
-
       <button
         onClick={() => setOpen(!open)}
         className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full flex items-center justify-center font-semibold text-sm text-primary-foreground bg-primary shadow-lg hover:scale-105 transition"
@@ -83,13 +109,9 @@ export default function Chatbot() {
         AI
       </button>
 
-      {/* Chat Window */}
-
       {open && (
 
         <div className="fixed bottom-24 right-6 w-80 h-[460px] glass-card flex flex-col z-50">
-
-          {/* Header */}
 
           <div className="px-4 py-3 border-b border-border flex items-center justify-between">
             <span className="font-semibold text-sm">
@@ -104,8 +126,6 @@ export default function Chatbot() {
             </button>
           </div>
 
-          {/* Messages */}
-
           <div className="flex-1 overflow-y-auto p-4 space-y-3 text-sm">
 
             {messages.map((msg, i) => (
@@ -118,11 +138,12 @@ export default function Chatbot() {
                     : "mr-auto bg-muted text-foreground"
                 }`}
               >
+
                 {msg.role === "assistant" ? (
 
-                  <div className="prose prose-sm max-w-none prose-p:my-2 prose-ul:my-2 prose-li:my-1 prose-headings:my-2">
+                  <div className="prose prose-sm max-w-none prose-p:my-2 prose-ul:list-disc prose-ul:pl-5 prose-li:my-1">
 
-                    <ReactMarkdown>
+                    <ReactMarkdown remarkPlugins={[remarkGfm]}>
                       {msg.content}
                     </ReactMarkdown>
 
@@ -133,6 +154,7 @@ export default function Chatbot() {
                   msg.content
 
                 )}
+
               </div>
 
             ))}
@@ -146,8 +168,6 @@ export default function Chatbot() {
             <div ref={bottomRef} />
 
           </div>
-
-          {/* Input */}
 
           <div className="border-t border-border p-3 flex gap-2">
 
