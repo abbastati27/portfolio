@@ -153,7 +153,15 @@ export default function Chatbot() {
 
             <input
               value={input}
-              onChange={(e) => setInput(e.target.value)}
+              onChange={(e) => {
+                const value = e.target.value
+
+                if (value.length === 1) {
+                  setInput(value.toUpperCase())
+                } else {
+                  setInput(value)
+                }
+              }}
               onKeyDown={(e) => e.key === "Enter" && sendMessage()}
               className="flex-1 bg-muted border border-border rounded-md px-3 py-2 text-sm outline-none focus:border-primary"
               placeholder="Ask about Abbas..."
