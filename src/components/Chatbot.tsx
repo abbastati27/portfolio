@@ -159,11 +159,11 @@ export default function Chatbot() {
 
             ))}
 
-            {loading && (
+            {/* {loading && (
               <div className="text-xs text-muted-foreground">
                 Thinking...
               </div>
-            )}
+            )} */}
 
             <div ref={bottomRef} />
 
