@@ -175,7 +175,7 @@ export default function Chatbot() {
 
             {loading && (
               <div className="text-xs text-muted-foreground">
-                Thinking...
+                Typing...
               </div>
             )}
 
