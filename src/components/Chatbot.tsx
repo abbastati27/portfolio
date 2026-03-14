@@ -13,6 +13,15 @@ export default function Chatbot() {
 
   const bottomRef = useRef<HTMLDivElement>(null)
 
+  // -----------------------------------
+  // CLEAR LOCAL STORAGE ON PAGE LOAD
+  // -----------------------------------
+
+  useEffect(() => {
+    console.log("Clearing chat session for fresh start")
+    localStorage.removeItem("chat_session")
+  }, [])
+
   const session_id =
     localStorage.getItem("chat_session") ||
     Math.random().toString(36).substring(2)
@@ -29,6 +38,8 @@ export default function Chatbot() {
 
     const formattedInput =
       input.charAt(0).toUpperCase() + input.slice(1)
+
+    console.log("Sending message:", formattedInput)
 
     const userMessage = { role: "user", content: formattedInput }
 
@@ -47,6 +58,8 @@ export default function Chatbot() {
         })
       })
 
+      console.log("Streaming response started")
+
       const reader = res.body?.getReader()
       const decoder = new TextDecoder()
 
@@ -62,7 +75,7 @@ export default function Chatbot() {
 
         if (done) break
 
-        const chunk = decoder.decode(value)
+        const chunk = decoder.decode(value, { stream: true })
 
         botText += chunk
 
@@ -85,7 +98,11 @@ export default function Chatbot() {
         return updated
       })
 
-    } catch {
+      console.log("Streaming completed")
+
+    } catch (err) {
+
+      console.error("Chatbot error:", err)
 
       setMessages(prev => [
         ...prev,
@@ -94,7 +111,6 @@ export default function Chatbot() {
           content: "Sorry, something went wrong."
         }
       ])
-
     }
 
     setLoading(false)
@@ -150,20 +166,18 @@ export default function Chatbot() {
                   </div>
 
                 ) : (
-
                   msg.content
-
                 )}
 
               </div>
 
             ))}
 
-            {/* {loading && (
+            {loading && (
               <div className="text-xs text-muted-foreground">
                 Thinking...
               </div>
-            )} */}
+            )}
 
             <div ref={bottomRef} />
 
