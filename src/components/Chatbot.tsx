@@ -122,7 +122,7 @@ export default function Chatbot() {
         onClick={() => setOpen(!open)}
         className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full flex items-center justify-center font-semibold text-sm text-primary-foreground bg-primary shadow-lg hover:scale-105 transition"
       >
-        AI
+        Ask me
       </button>
 
       {open && (
