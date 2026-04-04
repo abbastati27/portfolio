@@ -63,51 +63,62 @@ const projects = [
     ]
   },
   {
-    title: "AstroSense — AI Astrology Assistant",
-    description:
-      "An AI-powered astrology chatbot that intelligently detects user intent, validates required birth details, and delivers accurate astrology predictions via automated workflows.",
-    fullDescription:
-      "AstroSense is an AI-powered astrology chatbot built entirely using n8n automations. It dynamically identifies the user's astrology query intent (such as marriage, career, health, etc.), checks whether essential birth details are available, and smartly asks users for only the missing information. Once inputs are complete, the system automatically calls the relevant VedicAstroAPI endpoint, retrieves astrology insights, and passes them to a second LLM that generates precise, context-bound responses — ensuring accuracy, structure, and reliability throughout the conversation flow.",
-    image:
-      "https://www.nadiastrologyonline.com/img/vedic-astrology.jpg?w=600&q=80",
-    tags: ["n8n", "Automation", "LLM", "API Integration"],
-    github: "https://github.com/abbastati27",
-    category: "AI/ML",
-    features: [
-      {
-        icon: "🔍",
-        title: "Intent Detection",
-        description:
-          "Identifies the type of astrology query and required inputs automatically.",
-      },
-      {
-        icon: "🤖",
-        title: "Smart Conversation Flow",
-        description:
-          "Requests missing user information dynamically to complete predictions.",
-      },
-      {
-        icon: "🌐",
-        title: "API Integration",
-        description:
-          "Fetches accurate astrology data using VedicAstroAPI through HTTP workflows.",
-      },
-      {
-        icon: "🧠",
-        title: "Dual-LLM Orchestration",
-        description:
-          "Uses one LLM for decision logic and another for final astrology responses.",
-      },
-    ],
-    skills: [
-      "n8n",
-      "Automation Pipelines",
-      "LLMs",
-      "VedicAstroAPI",
-      "Workflow Orchestration",
-      "JSON Handling",
-    ],
-  },
+  title: "AstroSense — Hybrid RAG + API AI Assistant",
+
+  description:
+    "A hybrid AI system that combines deterministic astrology APIs with a RAG-powered knowledge layer to deliver both accurate predictions and context-aware responses.",
+
+  fullDescription:
+    "AstroSense is a hybrid AI system designed to handle both structured astrology predictions and open-ended user queries through intelligent routing and orchestration. The system first performs intent detection to classify whether a query requires deterministic prediction or informational response.\n\nFor astrology-related queries, it follows a strict validation pipeline that collects required birth details (date, time, location) before calling the VedicAstroAPI, ensuring fully grounded and accurate outputs without hallucination.\n\nFor general queries (such as platform information, services, or input requirements), the system leverages a Retrieval-Augmented Generation (RAG) pipeline. User queries are converted into embeddings and matched against a curated knowledge base stored in Supabase Vector DB. The retrieved context is then injected into the LLM to generate precise, context-aware responses.\n\nThe system uses dual-LLM orchestration, where one model handles decision-making and routing logic, while another generates final responses. This architecture ensures a balance between reliability (via API grounding) and flexibility (via retrieval-based reasoning), demonstrating real-world AI system design beyond simple chatbot implementations.",
+
+  image:
+    "https://www.nadiastrologyonline.com/img/vedic-astrology.jpg?w=600&q=80",
+
+  tags: ["RAG", "LLM", "n8n", "Supabase", "AI Systems"],
+
+  github: "https://github.com/abbastati27",
+
+  category: "AI/ML",
+
+  features: [
+    {
+      icon: "🧠",
+      title: "Hybrid AI Architecture",
+      description:
+        "Combines deterministic API pipelines with RAG-based knowledge retrieval for accurate and flexible responses."
+    },
+    {
+      icon: "🔀",
+      title: "Intent-Based Routing",
+      description:
+        "Classifies queries to route between astrology prediction workflows and knowledge retrieval pipelines."
+    },
+    {
+      icon: "📚",
+      title: "RAG with Vector Search",
+      description:
+        "Uses Supabase Vector DB for embedding-based retrieval and context grounding before LLM response generation."
+    },
+    {
+      icon: "🤖",
+      title: "Dual-LLM Orchestration",
+      description:
+        "Separates decision-making and response generation across two LLMs for improved control and accuracy."
+    },
+  ],
+
+  skills: [
+    "n8n",
+    "LLMs",
+    "RAG",
+    "Supabase Vector DB",
+    "Embeddings",
+    "Vector Search",
+    "VedicAstroAPI",
+    "Workflow Orchestration",
+    "JSON Handling",
+  ],
+},
   {
     title: "CareerPath AI",
     description:
