@@ -51,16 +51,16 @@ const ContactSection = () => {
     {
       icon: MessageCircle,
       label: "WhatsApp",
-      value: "+91 7976538046",
-      href: "https://wa.me/917976538046",
+      value: "+971 526864531",
+      href: "https://wa.me/971526864531",
       color: "from-green-600 to-green-400",
     },
     {
       icon: Phone,
       label: "Phone",
-      value: "+91 7976538046",
+      value: "+971 526864531",
       action: () => {
-        navigator.clipboard.writeText("+917976538046");
+        navigator.clipboard.writeText("+971 526864531");
         showToast("Phone number copied to clipboard!");
       },
       color: "from-purple-600 to-purple-400",

@@ -58,7 +58,7 @@ const experience = [
   {
     role: "AI/ML Engineer",
     company: "AppSynergies Technologies Ltd., London (Remote)",
-    duration: "July 2025 – January 2026",
+    duration: "April 2025 – Present",
     details: [
       "Built complete RAG pipelines using Supabase Vector DB + LangChain + n8n for ingestion, embeddings, retrieval, and GPT-based answering.",
       "Designed Retell AI voice agents for appointments, consultancy workflows, support calls, and feedback systems.",
